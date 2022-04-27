@@ -1,0 +1,28 @@
+<script>
+	export let hereKitty = false;
+</script>
+
+<img
+	class:curious={hereKitty}
+	alt="Kitten"
+	src="https://svelte.dev/tutorial/kitten.png"
+>
+
+<style>
+	img {
+		position: absolute;
+		left: 0;
+		bottom: -60px;
+		transform: translate(-80%, 0) rotate(-30deg);
+		transform-origin: 100% 100%;
+		transition: transform 0.4s;
+	}
+
+	.curious {
+		transform: translate(-15%, 0) rotate(0deg);
+	}
+
+	:global(body) {
+		overflow: hidden;
+	}
+</style>
